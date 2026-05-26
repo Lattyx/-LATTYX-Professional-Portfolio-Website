@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lattyxx — Professional Portfolio</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for premium icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shifting Blurred Ambient Blobs -->
+    <div class="background-decor">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Frosted Header Navigation -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-bolt-lightning text-accent"></i>
+            <span>Lattyx</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#hero" class="nav-item active" data-i18n="nav_home">Home</a>
+            <a href="#about" class="nav-item" data-i18n="nav_about">About</a>
+            <a href="#projects" class="nav-item" data-i18n="nav_projects">Projects</a>
+            <a href="#skills" class="nav-item" data-i18n="nav_skills">Skills</a>
+            <a href="#contact" class="nav-item" data-i18n="nav_contact">Contact</a>
+        </nav>
+        
+        <!-- Language Clamshell Dropdown (Accordion) -->
+        <div class="language-clamshell">
+            <button type="button" class="clamshell-trigger" id="clamshell-btn">
+                <span id="clamshell-current-flag">🇺🇸</span>
+                <span id="clamshell-current-name">EN</span>
+                <i class="fa-solid fa-caret-down clamshell-arrow"></i>
+            </button>
+            <div class="clamshell-content" id="clamshell-content">
+                <div class="clamshell-item" data-lang="en">🇺🇸 EN</div>
+                <div class="clamshell-item" data-lang="ua">🇺🇦 UA</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-content">
+                <div class="dev-badge" data-i18n="hero_badge"><i class="fa-solid fa-code"></i> Frontend Developer</div>
+                <h1 class="hero-title">
+                    <span data-i18n="hero_greeting">Hi! I am</span> <br>
+                    <span class="gradient-text">Lattyx</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">An XX-year-old self-taught web developer from Ukraine. Crafting highly aesthetic, responsive, and clean web applications.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary"><i class="fa-solid fa-rocket"></i> <span data-i18n="btn_projects">View My Projects</span></a>
+                    <a href="#contact" class="btn-secondary"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_contact">Contact Me</span></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="visual-glow"></div>
+                    <div class="card-brand"><i class="fa-solid fa-bolt-lightning text-accent"></i> APEX DEVELOPER</div>
+                    <div class="card-circle"></div>
+                    <div class="card-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section glass-card about-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-circle-user text-accent"></i> <span data-i18n="about_title">About Me</span></h2>
+            </div>
+            <div class="about-text">
+                <p class="paragraph-large" data-i18n="about_intro">I am highly passionate about coding, user interface design, and dynamic animations. I began my development journey studying independently, working hard to turn ideas into interactive code.</p>
+                <p data-i18n="about_details">Currently, I specialize in creating modern layout architectures using HTML5, CSS3, and JavaScript, as well as scripting automation utilities in Python. I focus on visual wow-factor design like Glassmorphism, animations, and high responsiveness to deliver elite experiences.</p>
+                
+                <!-- Expanding Detailed Text (Click to toggle) -->
+                <button type="button" class="btn-secondary btn-sm" id="about-more-btn">
+                    <i class="fa-solid fa-angles-down"></i> <span data-i18n="btn_about_more">Read More</span>
+                </button>
+                <div class="about-more-content hidden" id="about-more-content">
+                    <p data-i18n="about_more_p1">I am XX years old and passionate about IT. I build beautiful websites, responsive landing pages, system utilities, interactive Telegram bots, script automation tasks, and simple game designs.</p>
+                    <p data-i18n="about_more_p2">I develop everything at a solid intermediate level. I am always open to putting in extra effort, learning new stacks on the fly, and dedicating 100% of my focus to deliver outstanding results!</p>
+                    <p data-i18n="about_more_p3">My philosophy when developing is simple: pixel-perfect visual execution, smooth performance, and clean code that is easy to maintain. I don't just build basic templates; I design custom layouts from scratch, applying modern glassmorphic overlays, vibrant gradients, and responsive grids. Whether it's a financial analytics dashboard or a landing page, I ensure that it looks premium and runs beautifully on any device.</p>
+                    <p data-i18n="about_more_p4">When it comes to automation and backend tasks, I prioritize stability and user privacy. My custom Telegram bots are built with robust exception handling and database integrations to ensure 24/7 uptime. I am always looking for new challenges that push my boundaries, and I take great pride in delivering solutions that exceed client expectations, showing that age is just a number when it comes to high-quality engineering.</p>
+                </div>
+
+                <div class="stats-panel">
+                    <div class="stat-item">
+                        <span class="stat-val">XX</span>
+                        <span class="stat-lbl" data-i18n="stat_age">Years Old</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">HTML/CSS</span>
+                        <span class="stat-lbl" data-i18n="stat_focus">Main Core</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">JavaScript</span>
+                        <span class="stat-lbl" data-i18n="stat_logic">App Logic</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-chart-line text-accent"></i> <span data-i18n="projects_title">Showcase Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Apex Dashboard -->
+                <div class="glass-card project-card">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <span class="project-tag">SaaS / Finance</span>
+                        <div class="project-icon"><i class="fa-solid fa-coins"></i></div>
+                    </div>
+                    <h3 class="project-name">Apex Financial Dashboard</h3>
+                    <p class="project-desc" data-i18n="proj1_desc">A premium financial monitoring SaaS dashboard. Features beautiful Glassmorphism, live Chart.js graphs, dynamic currency conversion APIs, and an AI-inspired savings planner widget.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3 Glass</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../Frelans/index.html" target="_blank" class="btn-proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="btn_demo">Live Demo</span></a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Premium Portfolio Site -->
+                <div class="glass-card project-card">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <span class="project-tag">Portfolio</span>
+                        <div class="project-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj2_title">Personal Portfolio Website</h3>
+                    <p class="project-desc" data-i18n="proj2_desc">This very website! A highly customized, futuristic portfolio specifically engineered to showcase elite coding skills, animations, and translation dictionary bindings.</p>
+                    <div class="project-tech">
+                        <span>Semantic HTML5</span>
+                        <span>Frosted CSS</span>
+                        <span>Vanilla JS</span>
+                        <span>i18n Engine</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-proj-link"><i class="fa-solid fa-rotate"></i> <span data-i18n="btn_current">Currently Viewing</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-laptop-code text-accent"></i> <span data-i18n="skills_title">Technical Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-badge-card glass-card">
+                    <i class="fa-brands fa-html5 text-danger"></i>
+                    <h4>HTML5</h4>
+                </div>
+                <div class="skill-badge-card glass-card">
+                    <i class="fa-brands fa-css3-alt text-accent"></i>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="skill-badge-card glass-card">
+                    <i class="fa-brands fa-js text-warning"></i>
+                    <h4>JavaScript ES6</h4>
+                </div>
+                <div class="skill-badge-card glass-card">
+                    <i class="fa-brands fa-python text-accent"></i>
+                    <h4>Python Utilities</h4>
+                </div>
+                <div class="skill-badge-card glass-card">
+                    <i class="fa-solid fa-terminal text-accent"></i>
+                    <h4>C++ (50/50)</h4>
+                </div>
+                <div class="skill-badge-card glass-card">
+                    <i class="fa-brands fa-git-alt text-danger"></i>
+                    <h4>Git & GitHub</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section glass-card contact-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-envelope-open-text text-accent"></i> <span data-i18n="contact_title">Get In Touch</span></h2>
+            </div>
+            <p class="contact-subtitle" data-i18n="contact_subtitle">If you have any simple freelance projects or custom landing page requests, click below to copy details or visit my profiles!</p>
+            
+            <div class="contact-links-grid">
+                <!-- Contact Item 1: Telegram Bot Link -->
+                <a href="https://t.me/Lattyxx_Bot" target="_blank" class="contact-copy-item glass-card" id="contact-tg">
+                    <i class="fa-brands fa-telegram text-accent" style="font-size: 28px;"></i>
+                    <div class="copy-details">
+                        <span>Telegram Bot</span>
+                        <strong>@Lattyxx_Bot</strong>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square copy-icon"></i>
+                </a>
+
+                <!-- Contact Item 2: GitHub Link -->
+                <a href="https://github.com/Lattyx" target="_blank" class="contact-copy-item glass-card">
+                    <i class="fa-brands fa-github" style="font-size: 28px; color: #fff;"></i>
+                    <div class="copy-details">
+                        <span>GitHub Profile</span>
+                        <strong>github.com/Lattyx</strong>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square copy-icon"></i>
+                </a>
+
+                <!-- Contact Item 3: Email Copy Card -->
+                <div class="contact-copy-item glass-card" id="contact-email" data-copy="xxxx@gmail.com">
+                    <i class="fa-solid fa-envelope text-accent" style="font-size: 28px;"></i>
+                    <div class="copy-details">
+                        <span>Email address</span>
+                        <strong>xxxx@gmail.com</strong>
+                    </div>
+                    <i class="fa-solid fa-copy copy-icon"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Lattyxx. All rights reserved. <span data-i18n="footer_signature">Crafted with ❤️ in Ukraine. Lattyxx.</span></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
